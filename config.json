@@ -1,0 +1,21 @@
+
+{
+  "exclude_values": {
+    "global": ["unknown", "various", "generic"],
+    "artist": ["badartist"]
+  },
+  "format_rules": {
+    "title": { "strip": true, "max_length": 60 },
+    "artist": { "strip": true, "lowercase": true}
+  },
+  "fields_spec": {
+    "title":      { "type": "str", "max_length": 200 },
+    "artist":     { "type": "str", "max_length": 200 },
+    "album":      { "type": "str", "max_length": 200 },
+    "genre":      { "type": "str", "max_length": 100 },
+    "tracknumber":{ "type": "int", "min": 1, "max": 9999 },
+    "date":       { "type": "int", "min": 1900, "max": 2100 },
+    "composer":   { "type": "str", "max_length": 200 },
+    "comment":    { "type": "str", "max_length": 1024 }
+  }
+}
